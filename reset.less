@@ -1,0 +1,277 @@
+/* ----------------------------------------------------------------------------
+   http://github.com/yui/yui3/raw/master/src/cssreset/css/reset.css
+ */
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html{
+	color:#000;
+	background:#FFF;
+}
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,
+img {
+	border:0;
+}
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+/*
+	TODO Figure out where this list-style rule is best set. Hedger has a request to investigate.
+*/
+li {
+	list-style:none;
+}
+
+caption,
+th {
+	text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,
+q:after {
+	content:'';
+}
+abbr,
+acronym {
+	border:0;
+	font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+	*font-size:100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+	color:#000;
+}
+
+
+/* ----------------------------------------------------------------------------
+   Only HTML5 elements from http://html5doctor.com/html-5-reset-stylesheet/
+ */
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+
+/* ----------------------------------------------------------------------------
+   fonts.css from the YUI Library: developer.yahoo.com/yui/
+   http://github.com/yui/yui3/raw/master/src/cssfonts/css/fonts.css
+   Changes:
+   * Remove body section
+   * Remove all px sizing
+   * Remove all font-family
+*/
+
+
+/**
+ * Nudge down to get to 13px equivalent for these form elements
+ */
+select,
+input,
+button,
+textarea {
+	font-size:99%;
+}
+
+/**
+ * To help tables remember to inherit
+ */
+table {
+	font-size:inherit;
+	font:100%;
+}
+
+/**
+ * Bump up IE to get to 13px equivalent for these fixed-width elements
+ */
+pre,
+code,
+kbd,
+samp,
+tt {
+	*font-size:108%;
+	line-height:100%;
+}
+
+
+
+/* ----------------------------------------------------------------------------
+   Stuff from
+   http://github.com/paulirish/html5-boilerplate/raw/master/css/style.css
+
+   Except:
+   * Removed the reset (using YUI3 reset directly)
+   * Removed the fonts.css (Using YUI3 fonts directly)
+   * Removed default colour of #444
+   * Removed non-semantic helper classes
+   * Removed the @media declarations
+   * Changed .ie6 stuff to _ prefixes
+   * changed .ie7 stuff to * prefixes or removing the prefix
+ */
+
+/* Headers (h1,h2,etc) have no default font-size or margin,
+   you'll want to define those yourself. */
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+html {
+  /* always force a scrollbar in non-IE */
+  overflow-y: scroll;
+}
+
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+
+ul, ol { margin-left: 1.8em; }
+ol { list-style-type: decimal; }
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align: top; }
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre {
+  padding: 15px;
+
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+input[type="checkbox"] { *vertical-align: baseline; }
+input { _vertical-align: text-bottom; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+/* colors for form validity */
+input:valid   {  }
+input:invalid {
+      border-radius: 1px;
+    -moz-box-shadow: 0px 0px 5px red;
+ -webkit-box-shadow: 0px 0px 5px red;
+         box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid { background-color: #f0dddd; }
+
+
+/* These selection declarations have to be separate.
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink. */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+/* make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+
+/* bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+img { -ms-interpolation-mode: bicubic; }

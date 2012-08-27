@@ -1,0 +1,82 @@
+/*
+    Web safe font stacks from
+    http://www.sitepoint.com/article/eight-definitive-font-stacks/
+
+    Sample usage:
+        @import "font_stacks.less";             // Include this library
+
+        h1 { .font[@wideserif] }                // Headings are wide serif
+        body { .font[@oldsansserif] }           // Body is old sans serif
+
+    Many fonts are pre-defined: @timesnewroman, @bookantiqua, etc.
+
+    References:
+    http://www.smashingmagazine.com/2009/09/22/complete-guide-to-css-font-stacks/
+    http://www.awayback.com/revised-font-stack/
+*/
+
+.font {
+    /* The Times New Roman-based serif stack: */
+    @serif:             Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+
+    @cambria:           Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    @hoeflertext:       "Hoefler Text", Cambria, Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    @utopia:            Utopia, Cambria, "Hoefler Text", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    @times:             Times, Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", "Times New Roman", serif;
+    @timesnewroman:     "Times New Roman", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, serif;
+
+    /* A modern Georgia-based serif stack: */
+    @wideserif:         Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
+    @constantia:        Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    @lucidabright:      "Lucida Bright", Lucidabright, Constantia, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    @lucidaserif:       "Lucida Serif", Constantia, "Lucida Bright", Lucidabright, Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    @lucida:            Lucida, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    @georgia:           Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", serif;
+
+    /* A more traditional Garamond-based serif stack: */
+    @oldserif:          "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+
+    @palatino:          "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    @palatinolinotype:  @palatino;
+    @bookantiqua:       "Book Antiqua", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    @baskerville:       Baskerville, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    @bookmanoldstyle:   "Bookman Old Style", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    @garamond:          Garamond, "Apple Garamond", "ITC Garamond Narrow", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    @centuryschoolbook: "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", Georgia, serif;
+
+    /* The Helvetica/Arial-based sans serif stack: */
+    @sansserif:         Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    @frutiger:          Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @calibri:           Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @gillsans:          "Gill Sans", "Gill Sans MT", Frutiger, "Frutiger Linotype", Univers, Calibri, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @tahoma:            Tahoma, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @geneva:            Geneva, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @helvetica:         "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans-serif;
+
+    /* The Verdana-based sans serif stack: */
+    @thinsansserif:     Corbel, "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+
+    @corbel:            Corbel, "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    @lucidasans:        "Lucida Grande", "Lucida Sans Unicode", Corbel, "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    @verdana:           Verdana, "Verdana Ref", Corbel, "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", sans-serif;
+
+    /* The Trebuchet-based sans serif stack: */
+    @oldsansserif:      "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitsream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+
+    @segoeui:           "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitsream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    @trebuchetms:       "Trebuchet MS", "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitsream Vera Sans", Verdana, "Verdana Ref", sans-serif;
+
+    /* The heavier “Impact” sans serif stack: */
+    @thicksansserif:    Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+
+    @impact:            @thicksansserif;
+    @arialblack:        "Arial Black", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", sans-serif;
+
+    /* The monospace stack: */
+    @monospace:         Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    @consolas:          @monospace;
+    @courier:           @monospace;
+    @couriernew:        @monospace;
+}

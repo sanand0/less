@@ -1,0 +1,63 @@
+/*
+    Taken from http://sencss.kilianvalkhof.com/ with the following changes:
+
+    1. Only font-size, margin-top, margin-bottom and line-height are adjusted
+    2. Except on sup / sub, which are retained fully
+    3. No vertical rhythm on form-level elements.
+ */
+
+body {
+  line-height: 150%;
+}
+textarea{
+  font-size:101%;
+}
+samp,code,kbd,tt{
+  line-height:1;
+  *line-height:1.5;
+}
+h1,h2,h3,h4,h5,h6{
+  margin-top:0;
+}
+h1{
+  font-size:2em;
+  margin-bottom:0.75em;
+}
+h2{
+  font-size:1.5em;
+  margin-bottom:1em;
+}
+h3{
+  font-size:1.1666em;
+  margin-bottom:1.286em;
+}
+h4{
+  font-size:1em;
+  margin-bottom:1.5em;
+}
+h5{
+  font-size:0.8333em;
+  margin-bottom:1.8em;
+}
+h6{
+  font-size:0.666em;
+  margin-bottom:2.25em;
+}
+p,pre,ul,ol,table,fieldset{
+  margin-top:0;
+  margin-bottom:1.5em;
+}
+sub{
+  top:0.4em;
+  font-size:0.85em;
+  line-height:1;
+  position:relative;
+  vertical-align:baseline;
+}
+sup{
+  font-size:0.85em;
+  line-height:1;
+  position:relative;
+  bottom:0.5em;
+  vertical-align:baseline;
+}
